@@ -138,8 +138,10 @@ export default {
             }
             
             try {
-                const res = await this.axios.post(VERIFY_USERNAME, {
-                    username: val
+                const res = await this.axios.get(VERIFY_USERNAME, {
+                    params: {
+                        username: val
+                    }
                 })
                 if (res.errno === 0) {
                     this.showUsernameInfo = false
