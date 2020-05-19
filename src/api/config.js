@@ -11,7 +11,6 @@ axios.defaults.timeout = 10000
 
 // 拦截器
 axios.interceptors.request.use(function (config) {
-    console.log(config)
     return config
 }, function(err) {
     return Promise.reject(err)
